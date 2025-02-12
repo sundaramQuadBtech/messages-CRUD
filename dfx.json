@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "messages_backend": {
+      "candid": "src/messages_backend/messages_backend.did",
+      "package": "messages_backend",
+      "type": "rust"
+    },
+    "messages_frontend": {
+      "dependencies": [
+        "messages_backend"
+      ],
+      "source": [
+        "src/messages_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "messages_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

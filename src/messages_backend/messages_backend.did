@@ -1,0 +1,10 @@
+type Result = variant { Ok; Err : text };
+type Result_1 = variant { Ok : vec record { nat64; text }; Err : text };
+service : {
+  create_post : (text) -> (nat64);
+  delete_all : () -> (Result);
+  delete_post : (nat64) -> (Result);
+  get_all_posts : () -> (Result_1) query;
+  get_paginated_posts : (nat64, nat64) -> (Result_1) query;
+  update_post : (nat64, text) -> (Result);
+}
